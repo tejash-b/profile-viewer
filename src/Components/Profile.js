@@ -4,17 +4,17 @@ import maps from '../images/maps.png'
 
 const Profile = () => {
   const user = useSelector(state => state.user)
-  const [accounts, setAccounts] = useState(user.allaccounts);
+  const accounts =user.allaccounts
   const [profile, setProfile] = useState({});
 
   useEffect(() => {
-    console.log(accounts)
     setProfile(accounts.filter(acc => {
       if (acc.name === user.username) {
         return acc
       }
+      else return null
     }))
-  }, [user])
+  }, [user,accounts])
 
   return (
     <div>
@@ -75,7 +75,7 @@ const Profile = () => {
         {profile.length > 0 &&
           <div className="profile-right">
             <p className="address"
-              style={{ float: 'left' }, { display: 'block' }, { textAlign: 'left' }}
+              style={{ float: 'left' ,  display: 'block' ,  textAlign: 'left' }}
             >
               Address :
             </p>

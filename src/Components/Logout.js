@@ -24,8 +24,11 @@ const Logout = () => {
             {
                 return acc
             }
+            else{
+                return null
+            }
         }))
-    },[user])
+    },[user,accounts])
     
     
     const LogoutClick = (e) =>{
@@ -34,14 +37,12 @@ const Logout = () => {
 
     const ListClick = (e) => {
         setDisplay(false)
-        console.log(e.target.textContent)
         if(e.target.alt){
             dispatch(setUsername(e.target.alt))
             dispatch(setAllAccounts(accounts))
             history.push('/profile')
         }
         else{
-            console.log('if elsse')
             dispatch(setUsername(e.target.textContent))
             dispatch(setAllAccounts(accounts))
             history.push('/profile')
@@ -73,12 +74,17 @@ const Logout = () => {
                             accounts.map((acc) => {
                                 if(acc.name !== profile[0].name)
                                 {
+                                    console.log(acc.id)
                                 return(
-                                    <li onClick={(e) => ListClick(e)}>
-                                        <img src={acc.profilepicture} alt={acc.name} />
+                                    
+                                    <li key={acc.id}
+                                        onClick={(e) => ListClick(e)} 
+                                    >
+                                        <img src={acc.profilepicture} alt={acc.name} key={acc.id} />
                                         {acc.name}
                                     </li>
                                 )}
+                                else return <span key={acc.id}></span>
                             })
                         }
                     </ul>

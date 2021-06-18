@@ -11,3 +11,263 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.container {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.container path{
+  stroke: none;
+  fill: darkslateblue;
+}
+
+#canvas{
+  width:40%;
+  max-width: 40%;
+  height: 400px;
+  max-height: 500px;
+  border-radius: 10px;
+  background-color: rgb(241, 241, 236);
+  margin: 170px auto 0 auto;
+  overflow-y: auto;
+  box-shadow: 0 0 10px 5px rgb(114, 108, 108);
+}
+
+#accounts{
+  background-color:white;
+  width:100%;
+
+}
+#accounts_list{
+  text-decoration: none;
+  list-style: none;
+  margin-top: 30px;
+}
+
+#accounts_name{
+  margin:20px;
+  border-bottom: 1px solid gray ;
+  text-align: left;
+  font-size:x-large;
+  cursor: pointer;
+}
+
+#accounts_name img{
+  width:30px;
+  height:30px;
+  border-radius: 20px;
+}
+
+
+.content{
+  width:80%;
+  height:80%;
+  margin:50px auto 50px auto;
+}
+
+.side-nav{
+  height: 86vh;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  left: 50px;
+  background: radial-gradient(circle, rgba(0,45,219,1) 34%, rgba(87,0,209,1) 74%);
+  overflow-x: hidden;
+  padding-top: 20px;
+  border-radius: 20px;
+}
+.side-nav a{
+  margin:20px ;
+  border-bottom: 1px solid gray;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 25px;
+  color: #a7a2a2;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.links:hover{
+  color:rgb(235, 241, 234);
+}
+
+.profile{
+  
+  width:168vh;
+  height:89vh;
+  left:250px;
+  position: absolute;
+  
+}
+
+.profile table {
+  margin:6px;
+}
+
+.profile h1{
+  border-bottom:1px solid gray;
+  margin:5px 10px 5px 10px;
+}
+#profilepic{
+  width:150px;
+  height: 130px;
+  border-radius: 80px;
+}
+
+.profile-left{
+  width:30%;
+  margin:5px;
+  padding: 1em;
+  float: left;
+  border-right: 1px solid gray;
+}
+.profile-left label{
+  text-align: center;
+}
+.profile-right{
+  width: 60%;
+  margin:5px; 
+  padding: 1em;
+  float: right;
+}
+
+.left-section1{
+  border-bottom: 1px solid gray;
+}
+.keys{
+  text-align: right;
+  color:gray;
+  padding: 2px;
+}
+.values{
+  text-align: left;
+  font-weight: bold;
+  padding: 2px;
+}
+
+#maps_image{
+  width:80vh;
+  height:200px;
+  border-radius: 20px;
+}
+
+.geo{
+  text-align: right;
+  margin-right: 55px;
+}
+
+.chat{
+  color:white;
+  float: right;
+  position: absolute;
+  right:20px;
+  bottom: 20px;
+}
+.chat span{
+  background: radial-gradient(circle, rgba(0,45,219,1) 34%, rgba(87,0,209,1) 74%);
+  padding: 5px 30px 5px 30px;
+  float: left;
+    
+}
+
+
+.profilename{
+  font-size:x-large;
+  color:rgb(0, 0, 0)
+}
+
+.company,.address{
+  font-size:larger;
+  color:gray
+}
+
+.logout{
+  position: absolute;
+  right: 40px;
+  margin: 5px;
+
+}
+
+.logout img{
+  width:40px;
+  height: 40px;
+  vertical-align: middle;
+  border-radius: 25px;
+}
+
+.comingsoon{
+  width:168vh;
+  height:89vh;
+  left:250px;
+  position: absolute;
+}
+.comingsoon p{
+  margin: 200px auto;
+  font-size:100px;
+  font-weight:800;
+  color:rgb(212, 208, 208)
+
+}
+.logout-window{
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  position: absolute;
+  top:65px;
+  right: 30px;
+  width:42vh;
+  max-height: 48vh;
+  overflow: scroll;
+  box-sizing: content-box;
+  box-shadow: 0 0 10px 5px rgb(114, 108, 108);
+  border-radius: 20px;
+}
+
+#logout-img{
+  width:100px;
+  height: 100px;
+  border-radius: 70px;
+}
+
+.logout-p{
+  font-size: large;
+  color: #818181;
+  font-weight: bold;
+}
+.logout-window li{
+  list-style: none;
+  margin: 2px 10px 2px 0;
+  padding: 5px;
+  border-top: 1px solid rgb(167, 160, 160);
+  cursor: pointer;
+}
+
+.logout-window button{
+  position: absolute;
+  top:20px;
+  right: 6px;
+  padding: 10px;
+  color:white;
+  background-color: rgb(172, 4, 4);
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 0; 
+  background: transparent;
+}
+
